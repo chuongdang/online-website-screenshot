@@ -5,8 +5,8 @@ if (!empty($_POST['url'])) {
     $height = $_POST['height'];
     $path = dirname(__FILE__) . '/captured';
     $phantomPath = '/usr/bin/phantomjs';
-    $userAgent = getenv("HTTP_USER_AGENT");
-    if (strpos($userAgent, 'Mac') !== FALSE) {
+    $os = PHP_OS;
+    if (strpos(strtolower($os), 'darwin') !== FALSE) {
         $phantomPath = '/usr/local/bin/phantomjs';
     }
     $command = sprintf(
