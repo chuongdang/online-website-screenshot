@@ -28,9 +28,11 @@ if (!empty($_POST['url'])) {
     </head>
     <body>
         <div id="wrapper">
+            <h3>Screen Capture</h3>
             <input type="text" id="url" placeholder="Input the URL" />
             <button class="btn" id="captureBtn">Capture</button>
-            <div id="result"></div>
+            <div id="result">
+            </div>
         </div>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
