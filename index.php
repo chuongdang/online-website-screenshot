@@ -7,13 +7,13 @@ if (!empty($_POST['url'])) {
     $resolution = $_POST['resolution'];
     $path = dirname(__FILE__) . '/captured';
     if (PHP_INT_MAX == 2147483647) {
-        $phantomPath = 'util/phantomjs-linux-32';
+        $phantomPath = 'util/phantomjs_linux_32';
     } else {
-        $phantomPath = 'util/phantomjs-linux-64';
+        $phantomPath = 'util/phantomjs_linux_64';
     }
     $os = PHP_OS;
     if (strpos(strtolower($os), 'darwin') !== FALSE) {
-        $phantomPath = 'util/phantomjs-mac';
+        $phantomPath = 'util/phantomjs_mac';
     }
     $command = sprintf(
         '%s --ignore-ssl-errors=true --ssl-protocol=any util/capture.js %s %s %s %s %s %s',
