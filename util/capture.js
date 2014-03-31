@@ -24,6 +24,10 @@ var renderPage = function(url, path, width, height, device, resolution) {
         [1440, 900]
     ];
 
+    if(!/^http:\/\//.test(url)) {
+        url = 'http://' + url;
+    }
+
     var page = webpage.create();
 
     if (device === 'mobile') {
