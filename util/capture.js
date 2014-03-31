@@ -24,7 +24,7 @@ var renderPage = function(url, path, width, height, device, resolution) {
         [1440, 900]
     ];
 
-    if(!/^http:\/\//.test(url)) {
+    if(!/^(http|https):\/\//.test(url)) {
         url = 'http://' + url;
     }
 
